@@ -1,0 +1,6 @@
+version: '3'
+
+services:
+  mimron-microservice:
+    container_name: mimron-microservice-dev
+    command: yarn dev -L
