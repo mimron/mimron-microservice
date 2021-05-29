@@ -12,6 +12,7 @@ const createVehicle = async (vehicleBody) => {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Model Name already taken');
   }
   const vehicle = await Vehicle.create(vehicleBody);
+  clearKey(Vehicle.collection.collectionName);
   return vehicle;
 };
 
